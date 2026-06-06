@@ -1,7 +1,10 @@
+include .env
+export
+
 TOP = counter
 SV = counter.sv
 CPP = sim_main.cpp
-OSS = /home/dmytro/ARM/oss-cad-suite
+OSS ?= $(OSS_CAD_SUITE)
 
 build:
 	$(OSS)/bin/verilator -Wall --cc $(SV) --exe $(CPP) --build --timing --trace

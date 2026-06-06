@@ -10,3 +10,6 @@ obj_dir/
 
 # editor
 .vscode/
+
+# environment variables
+.env
