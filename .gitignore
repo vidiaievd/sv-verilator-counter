@@ -1,0 +1,12 @@
+# Verilator build output
+obj_dir/
+
+# waveform files
+*.vcd
+*.fst
+
+# logs
+*.log
+
+# editor
+.vscode/
