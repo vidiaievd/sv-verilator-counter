@@ -12,6 +12,40 @@ The simulation is performed using Verilator, and results are visualized using GT
 
 ---
 
+# ⚙️ Dependencies
+
+This project requires the **OSS CAD Suite** (includes Verilator, GTKWave, etc.):
+
+https://github.com/YosysHQ/oss-cad-suite-build
+
+It is recommended to use the prebuilt release.
+
+---
+
+## Installation
+
+1. Download OSS CAD Suite:
+   https://github.com/YosysHQ/oss-cad-suite-build/releases
+
+2. Extract it, for example:  ~/tools/oss-cad-suite/
+
+3. No system-wide installation is required.
+
+---
+
+## Environment setup
+
+This project uses environment variables instead of hardcoded tool paths.
+
+Copy the example file:
+
+```bash
+cp .env.example .env
+
+Then set your local path: OSS_CAD_SUITE=/home/your_user/tools/oss-cad-suite
+
+---
+
 # 🧠 Design Description
 
 The RTL module contains:

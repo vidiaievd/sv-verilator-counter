@@ -1,16 +1,13 @@
 include .env
 export
 
-TOP = counter
-SV = counter.sv
-CPP = sim_main.cpp
 OSS ?= $(OSS_CAD_SUITE)
 
 build:
-	$(OSS)/bin/verilator -Wall --cc $(SV) --exe $(CPP) --build --timing --trace
+	$(OSS)/bin/verilator -Wall -f verilator.f --cc --build --timing --trace
 
-run: build
-	./obj_dir/V$(TOP)
+run:
+	./obj_dir/Vcounter
 
 wave:
 	$(OSS)/bin/gtkwave wave.vcd
